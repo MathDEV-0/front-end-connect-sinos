@@ -28,7 +28,9 @@ const Feed = () => {
     <div>
       {/* Header com logo */}
       <Retangulo tipo="1">
-        <img src="/assets/logo.png" alt="Logo" className={styles.logoImage} />
+        <Link to="/feed">
+          <img src="/assets/logo.png" alt="Logo" className={styles.logoImage} />
+        </Link>
       </Retangulo>
 
       {/* TopBar */}
@@ -53,46 +55,6 @@ const Feed = () => {
         <div className={styles.comunidadesWrapper}>
           <Comunidades />
         </div>
-      </div>
-      {/* Botão principal + menu suspenso */}
-      <div className={styles.postOptionsContainer}>
-        <button
-          className={styles.mainPostButton}
-          onClick={() => setShowOptions(!showOptions)}
-        >
-          Criar nova postagem
-        </button>
-
-        {/* Menu suspenso */}
-        {showOptions && (
-          <div className={styles.optionsPopup}>
-            {/* Opção: Adicionar imagem */}
-            <label htmlFor="uploadInput" className={styles.optionButton}>
-              Adicionar imagem
-            </label>
-            <input
-              type="file"
-              multiple
-              accept="image/*"
-              id="uploadInput"
-              style={{ display: "none" }}
-              onChange={(e) => {
-                handleImageSelect(e);
-              }}
-            />
-
-            {/* Opção: Postar apenas texto */}
-            <button
-              className={styles.optionButton}
-              onClick={() => {
-                setShowOptions(false);
-                navigate("/create-post", { state: { isTextOnly: true } });
-              }}
-            >
-              Postar apenas texto
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );

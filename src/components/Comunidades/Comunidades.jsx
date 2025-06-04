@@ -5,19 +5,19 @@ const mockComunidades = [
     nome: "Odeio JavaScript",
     tipo: "TI",
     membros: 1240,
-    imagem: "public/assets/comunidades/comunidade_odeio_javascript.png",
+    imagem: "/assets/comunidades/comunidade_odeio_javascript.png",
   },
   {
     nome: "Fofoqueiros do B",
     tipo: "Fofoca",
     membros: 120,
-    imagem: "public/assets/comunidades/comunidade_fofoqueiros_b.jpeg",
+    imagem: "/assets/comunidades/comunidade_fofoqueiros_b.jpeg",
   },
   {
     nome: "Apoio RS",
     tipo: "Doações",
     membros: 360,
-    imagem: "public/assets/comunidades/comunidade_rs.jpg",
+    imagem: "/assets/comunidades/comunidade_rs.jpg",
   },
 ];
 

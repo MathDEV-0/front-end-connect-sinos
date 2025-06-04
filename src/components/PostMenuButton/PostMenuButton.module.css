@@ -1,0 +1,51 @@
+.wrapper {
+  position: relative;
+}
+
+.plusWrapper {
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plusWrapper:hover {
+  background-color: #0056b3;
+}
+
+.plusIcon {
+  color: white;
+  font-size: 20px;
+}
+
+.optionsPopup {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.optionButton {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.optionButton:hover {
+  background-color: #f0f0f0;
+}

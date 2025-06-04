@@ -1,13 +1,16 @@
 // src/components/TopBar/TopBar.jsx
 
-import React from "react";
 import styles from "./TopBar.module.css";
+import PostMenuButton from "../PostMenuButton/PostMenuButton";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   return (
     <div className={styles.topBar}>
       {/* Itens de texto */}
-      <span className={styles.item}>Perfil</span>
+      <Link to="/perfil" className={styles.item}>
+        Perfil
+      </Link>
       <div className={styles.separator}></div> {/* Traço entre itens */}
       <span className={styles.item}>Comunidades</span>
       <div className={styles.separator}></div> {/* Traço entre itens */}
@@ -15,12 +18,8 @@ const TopBar = () => {
       <div className={styles.separator}></div> {/* Traço entre itens */}
       <span className={styles.item}>Repositórios</span>
       <div className={styles.separator}></div> {/* Traço entre itens */}
+      <PostMenuButton />
       {/* Ícones */}
-      <img
-        src="/assets/icons/cart.png"
-        alt="Carrinho"
-        className={styles.icon}
-      />
       <div className={styles.separator}></div> {/* Traço entre itens */}
       <img
         src="/assets/icons/search.png"

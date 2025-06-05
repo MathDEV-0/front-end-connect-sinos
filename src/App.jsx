@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Feed from "./pages/Feed/Feed";
-import CreatePost from "./pages/CreatePost/CreatPost";
+import CreatePost from "./pages/CreatePost/CreatePost";
 import { PostProvider } from "./context/PostContext";
 import Perfil from "./pages/Perfil/Perfil";
 /*import Repositorios from "./pages/Repositorios"; // Criar depois

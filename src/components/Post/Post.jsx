@@ -13,8 +13,15 @@ const Post = ({ autor, conteudo, imagens }) => {
           <img src={imagens[0]} alt="Post" className={styles.postImage} />
         )}
 
-        {/* Descrição agora vem depois da imagem */}
-        <p className={styles.conteudo}>{conteudo}</p>
+        {/* Descrição com quebra de linha manual */}
+        <div className={styles.conteudo}>
+          {conteudo.split("\n").map((linha, i) => (
+            <span key={i}>
+              {linha}
+              <br />
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

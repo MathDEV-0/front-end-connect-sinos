@@ -12,9 +12,7 @@ const Perfil = () => {
       </Retangulo>
 
       {/* TopBar */}
-      <Retangulo tipo="12">
-        <TopBar />
-      </Retangulo>
+      <TopBar />
 
       <div className={styles.userCard}>
         <div className={styles.avatar}></div>

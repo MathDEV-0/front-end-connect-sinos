@@ -13,6 +13,13 @@
   position: relative;
 }
 
+.conteudo {
+  white-space: pre-line; /* Mantém \n como quebra de linha */
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
 .imageViewer img {
   width: 100%;
   border-radius: 10px;

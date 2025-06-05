@@ -1,0 +1,107 @@
+.topBar {
+  width: 100vw; /* ocupa toda a largura da viewport */
+  font-family: 'Ancizar Sans', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d9d9d9;
+  padding: 0px 20px; /* espaçamento interno */
+  border-radius: 0;
+  margin: 0; /* remove qualquer margem externa */
+  gap: 10px;
+  overflow: hidden;
+}
+
+.leftGroup,
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+
+.separator {
+  width: 1px;
+  height: 25px;
+  background-color: #aaa;
+  border-left: 2px solid #000;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  cursor: pointer;
+  /* remover qualquer position: absolute */
+}
+
+@media (min-width: 768px) {
+  .topBar{
+    overflow: hidden;
+  }
+
+  .item {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  .topBar{
+    overflow: hidden;
+  }
+
+  .item {
+    font-size: 20px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+}
+
+@media (min-width: 390px) {
+  .item {
+    font-size: 20px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topBar {
+    overflow-x:auto;
+    white-space: nowrap;
+  }
+
+  .topBar > * {
+    flex: 0 0 auto; /* impede quebra de linha dos filhos */
+  }
+  
+}
+
+
+

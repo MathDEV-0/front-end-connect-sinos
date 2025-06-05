@@ -1,0 +1,117 @@
+/* Resetando margens e paddings globais */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principal */
+.homeContainer {
+  width: 100vw; /* Ocupa toda a largura da tela */
+  height: 100vh; /* Ocupa toda a altura da tela */
+  display: flex;
+  flex-direction: column; /* Coloca os elementos na vertical */
+  justify-content: flex-start; /* Alinha os elementos no topo */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Estilos dos retângulos */
+.retangulo {
+  width: 100%; /* Ajusta para ocupar toda a largura disponível */
+  max-width: 1440px; /* Limite da largura máxima */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px; /* Padding para espaçamento interno */
+  margin: 0; /* Remove margem externa */
+}
+
+/* Tipos de retângulos */
+.tipo1 {
+  background-color: #ffffff00;
+  height: 150px; /* Ajuste conforme necessário */
+}
+
+.tipo2 {
+  background: #d9d9d9;
+  height: 100px; /* Ajuste conforme necessário */
+}
+
+.tipo3 {
+  background-color: #206ab9;
+  height: 50px; /* Ajuste conforme necessário */
+}
+
+/* Estilos para as imagens */
+.logoImage,
+img {
+  width: 100%; /* Ajusta a largura das imagens */
+  max-width: 400px; /* Limita a largura das imagens */
+  height: auto; /* Mantém a proporção das imagens */
+}
+
+/* Estilos para o link */
+.link {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-size: 48px;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.photocontainer {
+  width: 1275px;
+  height: 411px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url("/assets/estudantes.jpg");
+  background-size: cover; /* Faz a imagem cobrir todo o container */
+  background-position: center; /* Centraliza a imagem dentro do container */
+  background-repeat: no-repeat;
+}
+
+.linkBlack {
+  color: black;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 400 !important;
+  font-size: 26px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (min-width: 1080px) {
+  .homeContainer {
+    height: auto; /* Ajusta a altura para telas menores */
+  }
+
+  .photocontainer {
+    width: 90%; /* Ocupa 100% da largura da tela em dispositivos móveis */
+    height: 250px; /* Ajusta a altura para uma visualização melhor em telas menores */
+  }
+
+  .link {
+    font-size: 34px; /* Ajusta o tamanho da fonte para telas menores */
+  }
+}
+
+
+@media (min-width: 768px) {
+  .homeContainer {
+    height: auto; /* Ajusta a altura para telas menores */
+  }
+
+  .photocontainer {
+    width: 100%; /* Ocupa 100% da largura da tela em dispositivos móveis */
+    height: 250px; /* Ajusta a altura para uma visualização melhor em telas menores */
+  }
+
+  .link {
+    font-size: 24px; /* Ajusta o tamanho da fonte para telas menores */
+  }
+}
+
+

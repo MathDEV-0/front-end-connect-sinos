@@ -1,18 +1,16 @@
-/* Estilos comuns para todos os retângulos */
 .retangulo {
-  margin: 0; /* Remove a margem */
-  padding: 0; /* Remove o padding */
-  width: 100%; /* Garantir que ocupa toda a largura */
-  box-sizing: border-box; /* Não afeta o tamanho total */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilos para diferentes tipos de Retângulos */
 .tipo1 {
   background-color: #003366;
-  height: 150px; /* Defina a altura conforme necessário */
+  height: 150px;
 }
 
 .tipo2 {
@@ -20,13 +18,13 @@
   height: 41px;
   margin-bottom: 50px;
   display: flex;
-  align-items: center; /* Garante alinhamento vertical centralizado */
-  justify-content: flex-end; /* Joga o conteúdo para a direita */
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .tipo3 {
   background-color: #007bff;
-  height: 182px; /* Defina a altura conforme necessário */
+  height: 182px;
   width: 977px;
   margin-bottom: 30px;
   display: flex;
@@ -42,9 +40,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto; /* Mantém ele grudado na direita */
-  margin-bottom: 0; /* Remove qualquer margem inferior extra */
-  flex-shrink: 0; /* Impede que ele seja comprimido */
+  margin-left: auto;
+  margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .tipo5 {
@@ -64,7 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 100px; /* Espaço entre o topo e o texto */
+  padding-top: 100px;
 }
 
 .tipo12 {
@@ -72,7 +70,21 @@
   height: 41px;
   margin-bottom: 50px;
   display: flex;
-  align-items: center; /* Garante alinhamento vertical centralizado */
+  align-items: center;
   justify-content: left;
   padding-left: 5px;
+}
+
+@media (max-width: 1024px) {
+  .tipo3 {
+    width: 100%;
+  }
+
+  .tipo5 {
+    width: 100%;
+  }
+
+  .tipo85 {
+    width: 100%;
+  }
 }

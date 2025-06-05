@@ -34,9 +34,7 @@ const Feed = () => {
       </Retangulo>
 
       {/* TopBar */}
-      <Retangulo tipo="12">
-        <TopBar />
-      </Retangulo>
+      <TopBar />
 
       <div className={styles.feedContent}>
         {/* Posts à esquerda */}

@@ -1,7 +1,7 @@
 .container {
-  display: flex; /* Organiza os elementos horizontalmente */
-  justify-content: space-between; /* Distribui os elementos horizontalmente */
-  align-items: flex-start; /* Alinha verticalmente ao topo */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-top: 0;
   padding: 1rem;
   width: 100%;
@@ -9,18 +9,18 @@
 }
 
 .postsSection {
-  flex: 1; /* Ocupa todo o espaço disponível à esquerda */
+  flex: 1;
   padding: 1rem;
 }
 
 .comunidades {
-  flex-shrink: 0; /* Impede que o componente se contraia */
-  width: 300px; /* Largura fixa para o componente Comunidades */
+  flex-shrink: 0;
+  width: 300px;
   background-color: #d9d9d9;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  max-width: 90vw; /* Garante responsividade em telas menores */
+  max-width: 90vw;
 }
 
 .cardComunidade {
@@ -41,12 +41,12 @@
   font-size: 0.9rem;
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Em telas pequenas, coloca os elementos um abaixo do outro */
+    flex-direction: column;
   }
+
   .comunidades {
-    width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+    width: 100%;
   }
 }

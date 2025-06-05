@@ -7,37 +7,39 @@ import { Link } from "react-router-dom";
 const TopBar = () => {
   return (
     <div className={styles.topBar}>
-      {/* Itens de texto */}
-      <Link to="/perfil" className={styles.item}>
-        Perfil
-      </Link>
-      <div className={styles.separator}></div> {/* Traço entre itens */}
-      <span className={styles.item}>Comunidades</span>
-      <div className={styles.separator}></div> {/* Traço entre itens */}
-      <span className={styles.item}>Sinos Flix</span>
-      <div className={styles.separator}></div> {/* Traço entre itens */}
-      <span className={styles.item}>Repositórios</span>
-      <div className={styles.separator}></div> {/* Traço entre itens */}
-      <PostMenuButton />
-      {/* Ícones */}
-      <div className={styles.separator}></div> {/* Traço entre itens */}
-      <img
-        src="/assets/icons/search.png"
-        alt="Buscar"
-        className={styles.icon}
-      />
-      <div className={styles.separator}></div> {/* Traço entre itens */}
-      <img
-        src="/assets/icons/bell.png"
-        alt="Notificações"
-        className={styles.icon}
-      />
-      <div className={styles.separator}></div> {/* Traço entre itens */}
-      <img
-        src="/assets/icons/settings.png"
-        alt="Configurações"
-        className={styles.icon}
-      />
+      <div className={styles.leftGroup}>
+        <Link to="/perfil" className={styles.item}>
+          Perfil
+        </Link>
+        <div className={styles.separator}></div>
+        <span className={styles.item}>Comunidades</span>
+        <div className={styles.separator}></div>
+        <span className={styles.item}>Sinos Flix</span>
+        <div className={styles.separator}></div>
+        <span className={styles.item}>Repositórios</span>
+        <div className={styles.separator}></div>
+        <PostMenuButton />
+      </div>
+
+      <div className={styles.rightGroup}>
+        <img
+          src="/assets/icons/search.png"
+          alt="Buscar"
+          className={styles.icon}
+        />
+        <div className={styles.separator}></div>
+        <img
+          src="/assets/icons/bell.png"
+          alt="Notificações"
+          className={styles.icon}
+        />
+        <div className={styles.separator}></div>
+        <img
+          src="/assets/icons/settings.png"
+          alt="Configurações"
+          className={styles.icon}
+        />
+      </div>
     </div>
   );
 };

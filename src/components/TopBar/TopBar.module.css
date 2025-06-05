@@ -1,38 +1,60 @@
-/* src/components/TopBar/TopBar.module.css */
-
 .topBar {
-  display: contents;
-  align-items: center; /* Alinha verticalmente */
-  justify-content: left; /* Distribui os itens horizontalmente */
-  height: 41px; /* Altura fixa */
-  background: #d9d9d9; /* Fundo cinza claro */
-  margin-bottom: 50px; /* Margem inferior */
-  padding: 0 20px; /* Preenchimento lateral para melhorar a aparência */
+  width: 100vw; /* ocupa toda a largura da viewport */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d9d9d9;
+  padding: 8px 40px; /* espaçamento interno */
+  border-radius: 0; /* remove bordas arredondadas, se quiser um retângulo completo */
+  margin: 0; /* remove qualquer margem externa */
+  gap: 10px;
+}
+
+.leftGroup,
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container {
+  max-width: none;
+  padding: 0;
+  margin: 0;
 }
 
 .item {
   font-size: 22px;
-  line-height: 100%;
-  justify-content: center; /* Horizontal alignment */
-  align-items: center; /*Vertical alignment*/
-  color: #333;
-  margin-left: 50px;
   font-weight: 700;
-  margin-right: 215px; /* Espaçamento entre itens de texto */
+  color: #333;
+  text-decoration: none;
 }
 
 .separator {
   width: 1px;
-  height: 41px;
-  background-color: #ccc;
-  margin: 0 10px;
-
-  /* Adicione isso para debug */
-  border: 2px solid rgb(0, 0, 0); /* Uma borda visível para teste */
+  height: 25px;
+  background-color: #aaa;
+  border-left: 2px solid #000;
 }
+
 .icon {
-  width: 38px;
-  height: 40px;
-  margin-left: 15px;
-  margin-right: 15px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  cursor: pointer;
+  /* remover qualquer position: absolute */
+}
+
+@media (max-width: 768px) {
+  .item {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
 }

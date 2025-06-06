@@ -41,7 +41,7 @@
 }
 
 .tipo3 {
-  background-color: #007bff;
+  background-color: #206ab9;
   height: 50px; /* Ajuste conforme necessário */
 }
 
@@ -57,8 +57,8 @@ img {
 .link {
   text-decoration: none;
   color: #fcfcfc;
-  font-size: 36px;
-  font-family: "Merriweather Sans", sans-serif;
+  font-size: 48px;
+  font-family: 'Ancizar Sans', sans-serif;
   font-weight: 400;
   letter-spacing: 0%;
 }
@@ -74,7 +74,32 @@ img {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) {
+.linkBlack {
+  color: black;
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 400 !important;
+  font-size: 26px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (min-width: 1080px) {
+  .homeContainer {
+    height: auto; /* Ajusta a altura para telas menores */
+  }
+
+  .photocontainer {
+    width: 90%; /* Ocupa 100% da largura da tela em dispositivos móveis */
+    height: 250px; /* Ajusta a altura para uma visualização melhor em telas menores */
+  }
+
+  .link {
+    font-size: 34px; /* Ajusta o tamanho da fonte para telas menores */
+  }
+}
+
+
+@media (min-width: 768px) {
   .homeContainer {
     height: auto; /* Ajusta a altura para telas menores */
   }
@@ -89,11 +114,4 @@ img {
   }
 }
 
-.linkBlack {
-  color: black;
-  font-family: "Karla", sans-serif;
-  font-weight: 400 !important;
-  font-size: 24px !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
+

@@ -1,5 +1,6 @@
 .topBar {
   width: 100vw; /* ocupa toda a largura da viewport */
+  font-family: 'Ancizar Sans', sans-serif;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -9,6 +10,7 @@
   border-radius: 0;
   margin: 0; /* remove qualquer margem externa */
   gap: 10px;
+  overflow: hidden;
 }
 
 .leftGroup,
@@ -46,7 +48,11 @@
   /* remover qualquer position: absolute */
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .topBar{
+    overflow: hidden;
+  }
+
   .item {
     margin-left: 20px;
     margin-right: 20px;
@@ -58,3 +64,44 @@
     height: 32px;
   }
 }
+
+@media (min-width: 1024px) {
+  
+  .topBar{
+    overflow: hidden;
+  }
+
+  .item {
+    font-size: 20px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+}
+
+@media (min-width: 390px) {
+  .item {
+    font-size: 20px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topBar {
+    overflow-x:auto;
+    white-space: nowrap;
+  }
+
+  .topBar > * {
+    flex: 0 0 auto; /* impede quebra de linha dos filhos */
+  }
+  
+}
+
+
+

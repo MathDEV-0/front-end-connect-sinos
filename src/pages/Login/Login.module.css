@@ -54,7 +54,7 @@ img {
 }
 
 .textoLogin {
-  font-family: "Kokoro";
+  font-family: 'Ancizar Sans', sans-serif;
   font-weight: 500 !important;
   font-size: 30px !important;
   line-height: 100%;
@@ -126,4 +126,11 @@ img {
   transform: translateY(-50%); /* Centraliza verticalmente o ícone */
   cursor: pointer;
   font-size: 18px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+@media (min-width: 768px) {  
+  .retangulo{
+    height: 50px; /* Ajuste conforme necessário */
+    width: 50%; /* Ajusta para ocupar toda a largura disponível */
+  }
 }

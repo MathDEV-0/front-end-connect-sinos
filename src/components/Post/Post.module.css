@@ -5,6 +5,7 @@
   border-radius: 10px;
   margin-bottom: 16px;
   max-width: 898px;
+  font-family: 'Ancizar Sans', sans-serif;
 }
 
 .avatar {
@@ -72,3 +73,5 @@
     font-size: 16px;
   }
 }
+
+

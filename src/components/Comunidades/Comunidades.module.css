@@ -6,6 +6,7 @@
   padding: 1rem;
   width: 100%;
   box-sizing: content-box;
+  font-family: 'Ancizar Sans', sans-serif;
 }
 
 .postsSection {
@@ -21,6 +22,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   max-width: 90vw;
+  font-family: 'Ancizar Sans', sans-serif;
 }
 
 .cardComunidade {
@@ -39,6 +41,16 @@
 .cardComunidade p {
   margin: 0.2rem 0;
   font-size: 0.9rem;
+}
+.button{
+  font-family: 'Ancizar Sans', sans-serif;
+  padding: 3px 6px; /* Top/Bottom, Left/Right */
+  font-size: 16px;
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; 
+  cursor: pointer;
+  border-radius: 10px;
+  border: none; /* Remove a borda padrão do botão */
 }
 
 @media (max-width: 768px) {

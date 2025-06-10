@@ -37,17 +37,15 @@
 
 /* Popup suspenso */
 .optionsPopup {
-  position: relative;
-  top: 30px;
-  left: 0;
-  background: white;
+  position: absolute;
+  top: 50px; /* ajuste conforme necessidade */
+  right: 0;
+  background-color: white;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 8px 0;
-  z-index: 10;
-  width: 200px;
-  animation: fadeIn 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 9999; /* MUITO importante */
 }
 
 /* Estilo dos itens do popup */
@@ -82,6 +80,8 @@
 
 .feedContent {
   display: flex;
+  position: relative; /* se for necessário */
+  z-index: 1; /* mantenha baixo */
   gap: 2rem;
   padding: 1rem;
 }
@@ -92,4 +92,31 @@
 
 .comunidadesWrapper {
   width: 300px;
+}
+
+.wrapper {
+  position: fixed; /* para garantir que fique flutuando */
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000; /* IMPORTANTE: para garantir que está acima de tudo */
+}
+
+.plusWrapper {
+  background-color: #007bff;
+  padding: 14px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.optionsPopup {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Garantir que o popup esteja visível */
 }

@@ -7,11 +7,13 @@ import styles from "./Feed.module.css";
 import Comunidades from "../../components/Comunidades/Comunidades";
 import { usePostContext } from "../../context/PostContext";
 import { useState } from "react";
+import PostMenuButton from "../../components/PostMenuButton/PostMenuButton";
 
 const Feed = () => {
   const navigate = useNavigate();
   const { posts } = usePostContext(); // Posts global
-  const [showOptions, setShowOptions] = useState(false); // Estado para menu popup
+  {
+    /*const [showOptions, setShowOptions] = useState(false); // Estado para menu popup
 
   const handleImageSelect = (event) => {
     const files = event.target.files;
@@ -22,7 +24,8 @@ const Feed = () => {
       setShowOptions(false); // Fecha  menu
       navigate("/create-post", { state: { images: imagesArray } });
     }
-  };
+  };*/
+  }
 
   return (
     <div>

@@ -18,7 +18,7 @@ const TopBar = () => {
         <div className={styles.separator}></div>
         <span className={styles.item}>Repositórios</span>
         <div className={styles.separator}></div>
-        <PostMenuButton />
+        <PostMenuButton inTopBar />
       </div>
 
       <div className={styles.rightGroup}>

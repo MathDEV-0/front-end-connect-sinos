@@ -1,25 +1,30 @@
 .topBar {
   width: 100vw; /* ocupa toda a largura da viewport */
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: "Ancizar Sans", sans-serif;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  position: relative;
   align-items: center;
+  overflow: visible !important;
   background: #d9d9d9;
   padding: 0px 20px; /* espaçamento interno */
   border-radius: 0;
   margin: 0; /* remove qualquer margem externa */
   gap: 10px;
-  overflow: hidden;
+  z-index: 100;
+  overflow: visible; /* importante para popup ficar visível */
 }
 
 .leftGroup,
 .rightGroup {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
 }
+
 .container {
   max-width: none;
   padding: 0;
@@ -48,40 +53,7 @@
   /* remover qualquer position: absolute */
 }
 
-@media (min-width: 768px) {
-  .topBar{
-    overflow: hidden;
-  }
-
-  .item {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 18px;
-  }
-
-  .icon {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-@media (min-width: 1024px) {
-  
-  .topBar{
-    overflow: hidden;
-  }
-
-  .item {
-    font-size: 20px;
-  }
-
-  .icon {
-    width: 36px;
-    height: 36px;
-  }
-  
-}
-
+/* MEDIA QUERIES */
 @media (min-width: 390px) {
   .item {
     font-size: 20px;
@@ -93,15 +65,50 @@
   }
 
   .topBar {
-    overflow-x:auto;
+    overflow-x: auto;
+    overflow-y: visible; /* manter vertical visível para popup */
     white-space: nowrap;
   }
 
   .topBar > * {
     flex: 0 0 auto; /* impede quebra de linha dos filhos */
   }
-  
 }
 
+@media (min-width: 768px) {
+  .item {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+  }
 
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
 
+  .topBar {
+    overflow-x: auto; /* permite rolagem horizontal */
+    overflow-y: visible; /* deixa popup aparecer verticalmente */
+  }
+}
+.topBarPopup {
+  top: 100%;
+  right: 0;
+  bottom: auto;
+}
+@media (min-width: 1024px) {
+  .item {
+    font-size: 20px;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topBar {
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+}

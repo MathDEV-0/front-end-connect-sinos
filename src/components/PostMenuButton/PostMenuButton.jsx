@@ -4,7 +4,7 @@ import styles from "./PostMenuButton.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-const PostMenuButton = () => {
+const PostMenuButton = ({ inTopBar }) => {
   const [showOptions, setShowOptions] = useState(false);
   const navigate = useNavigate();
 

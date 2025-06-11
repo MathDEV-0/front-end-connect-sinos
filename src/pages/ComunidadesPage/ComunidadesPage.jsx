@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Retangulo from "../../components/Retangulo/Retangulo";
 import TopBar from "../../components/TopBar/TopBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import Comunidades from "../../components/Comunidades/Comunidades";
 import styles from "./ComunidadesPage.module.css";
 import mockComunidades from "../../mocks/mockComunidades";
@@ -38,13 +40,23 @@ export default function ComunidadesPage() {
         <aside className={styles.sidebar}>
           <h2>Amigos</h2>
           <div className={styles.amigosGrid}>
-            {mockAmigos.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`Amigo ${index + 1}`}
-                className={styles.amigoCard}
-              />
+            {mockAmigos.map(({ nome, imagem }, index) => (
+              <div key={index} className={styles.amigoCard}>
+                {imagem ? (
+                  <img
+                    src={imagem}
+                    alt={`Amigo ${nome}`}
+                    className={styles.amigoFoto}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faCircleUser}
+                    className={styles.defaultIcon}
+                    size="3x"
+                  />
+                )}
+                <span>{nome}</span>
+              </div>
             ))}
           </div>
         </aside>

@@ -43,16 +43,29 @@
 
 .amigosGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 15px;
-  margin-top: 10px;
+  justify-items: center;
+  text-align: center;
 }
 
 .amigoCard {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
 }
+
+.amigoFoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 6px;
+}
+
 .scrollContainer {
   display: flex;
   overflow-x: auto;
@@ -68,4 +81,72 @@
 .scrollContainer::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 4px;
+}
+.defaultIcon {
+  color: #888;
+  border-radius: 50%;
+  background-color: #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 6px;
+
+  width: 80px; /* Mesma largura da amigoFoto */
+  height: 80px; /* Mesma altura da amigoFoto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* Ajuste o tamanho do ícone internamente */
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+  }
+
+  .leftColumn,
+  .sidebar {
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+
+  .amigoFoto {
+    width: 60px;
+    height: 60px;
+  }
+
+  .amigoCard {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amigoFoto {
+    width: 55px;
+    height: 55px;
+  }
+
+  .amigoCard {
+    font-size: 12px;
+  }
+
+  .amigosGrid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+
+  .logoImage {
+    height: 40px;
+  }
+
+  .section {
+    padding: 12px;
+  }
+
+  .mainContent {
+    padding: 10px;
+    gap: 10px;
+  }
 }

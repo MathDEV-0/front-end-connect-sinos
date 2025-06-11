@@ -7,6 +7,7 @@ import Feed from "./pages/Feed/Feed";
 import CreatePost from "./pages/CreatePost/CreatePost";
 import { PostProvider } from "./context/PostContext";
 import Perfil from "./pages/Perfil/Perfil";
+import ComunidadesPage from "./pages/ComunidadesPage/ComunidadesPage";
 /*import Repositorios from "./pages/Repositorios"; // Criar depois
 import Sinosflix from "./pages/Sinosflix"; // Já criado*/
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/feed" element={<Feed />} />
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/perfil" element={<Perfil />} />
+          <Route path="/comunidadespage" element={<ComunidadesPage />} />
           {/*<Route path="/repositorios" element={<Repositorios />} />
         <Route path="/sinosflix" element={<Sinosflix />} />
         {/* Rota fallback opcional */}

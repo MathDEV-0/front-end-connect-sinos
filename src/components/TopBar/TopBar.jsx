@@ -12,7 +12,9 @@ const TopBar = () => {
           Perfil
         </Link>
         <div className={styles.separator}></div>
-        <span className={styles.item}>Comunidades</span>
+        <Link to="/comunidadespage" className={styles.item}>
+          Comunidades
+        </Link>
         <div className={styles.separator}></div>
         <span className={styles.item}>Sinos Flix</span>
         <div className={styles.separator}></div>

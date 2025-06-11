@@ -6,8 +6,8 @@ import Post from "../../components/Post/Post";
 import styles from "./Feed.module.css";
 import Comunidades from "../../components/Comunidades/Comunidades";
 import { usePostContext } from "../../context/PostContext";
-import { useState } from "react";
-import PostMenuButton from "../../components/PostMenuButton/PostMenuButton";
+import mockComunidades from "../../mocks/mockComunidades";
+<Comunidades comunidades={mockComunidades} />;
 
 const Feed = () => {
   const navigate = useNavigate();
@@ -54,7 +54,8 @@ const Feed = () => {
 
         {/* Comunidades à direita */}
         <div className={styles.comunidadesWrapper}>
-          <Comunidades />
+          <h1>Suas Comunidades</h1>
+          <Comunidades comunidades={mockComunidades} />
         </div>
       </div>
     </div>

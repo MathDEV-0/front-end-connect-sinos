@@ -92,6 +92,22 @@
 
 .comunidadesWrapper {
   width: 300px;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.comunidadesWrapper img {
+  max-width: 100%; /* impede que a imagem fique maior que o container */
+  height: auto; /* mantém proporção da imagem */
+  display: block; /* elimina espaços em linha */
+  border-radius: 6px; /* opcional, deixa cantos arredondados */
+}
+.comunidadesWrapper h1 {
+  font-family: "Ancizar Sans", sans-serif;
+  justify-content: middle;
 }
 
 .wrapper {

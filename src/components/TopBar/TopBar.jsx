@@ -1,12 +1,20 @@
 // src/components/TopBar/TopBar.jsx
-
 import styles from "./TopBar.module.css";
 import PostMenuButton from "../PostMenuButton/PostMenuButton";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const TopBar = () => {
+  const [popupAberto, setPopupAberto] = useState(false);
+
+  const handleTogglePopup = () => {
+    setPopupAberto((prev) => !prev);
+  };
+
   return (
-    <div className={styles.topBar}>
+    <div
+      className={`${styles.topBar} ${popupAberto ? styles.popupVisible : ""}`}
+    >
       <div className={styles.leftGroup}>
         <Link to="/perfil" className={styles.item}>
           Perfil
@@ -20,7 +28,8 @@ const TopBar = () => {
         <div className={styles.separator}></div>
         <span className={styles.item}>Repositórios</span>
         <div className={styles.separator}></div>
-        <PostMenuButton inTopBar />
+        {/* Passa o toggle como prop para o botão */}
+        <PostMenuButton inTopBar onTogglePopup={handleTogglePopup} />
       </div>
 
       <div className={styles.rightGroup}>

@@ -4,9 +4,15 @@ import styles from "./PostMenuButton.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-const PostMenuButton = ({ inTopBar }) => {
+const PostMenuButton = ({ inTopBar, onTogglePopup }) => {
   const [showOptions, setShowOptions] = useState(false);
   const navigate = useNavigate();
+
+  const toggleOptions = () => {
+    const novoEstado = !showOptions;
+    setShowOptions(novoEstado);
+    if (onTogglePopup) onTogglePopup(novoEstado); // chama o callback
+  };
 
   const handleImageSelect = (event) => {
     const files = event.target.files;
@@ -15,16 +21,14 @@ const PostMenuButton = ({ inTopBar }) => {
         URL.createObjectURL(file)
       );
       setShowOptions(false);
+      if (onTogglePopup) onTogglePopup(false); // fecha o popup no TopBar
       navigate("/create-post", { state: { images: imagesArray } });
     }
   };
 
   return (
     <div className={styles.wrapper}>
-      <div
-        className={styles.plusWrapper}
-        onClick={() => setShowOptions(!showOptions)}
-      >
+      <div className={styles.plusWrapper} onClick={toggleOptions}>
         <FontAwesomeIcon icon={faPlus} className={styles.plusIcon} />
       </div>
 
@@ -46,6 +50,7 @@ const PostMenuButton = ({ inTopBar }) => {
             className={styles.optionButton}
             onClick={() => {
               setShowOptions(false);
+              if (onTogglePopup) onTogglePopup(false);
               navigate("/create-post", { state: { isTextOnly: true } });
             }}
           >

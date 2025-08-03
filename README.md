@@ -23,8 +23,11 @@ Connect-Sinos is a minimal social network frontend prototype built with React. I
 Clone the repository and run locally:
 
 git clone https://github.com/MathDEV-0/connect-sinos.git
+
 cd connect-sinos
+
 npm install
+
 npm run dev (it might run at localhost port 5173)
 
 Live Demo

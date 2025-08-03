@@ -1,12 +1,31 @@
-# React + Vite
+# Connect-Sinos (MVP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Connect-Sinos is a minimal social network frontend prototype built with React. It showcases a feed of mock posts, user profiles, and community interfaces as a design and functionality experiment.
 
-Currently, two official plugins are available:
+> ⚠️ This project is a work-in-progress MVP without backend or authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Mocked posts feed
+- User profile page
+- Basic community UI
+- Responsive design
+- Live deployment on Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies
+
+- React
+- CSS Modules / Styled Components (optional)
+- Vercel for hosting
+
+## Getting Started
+
+Clone the repository and run locally:
+
+git clone https://github.com/MathDEV-0/connect-sinos.git
+cd connect-sinos
+npm install
+npm run dev (it might run at localhost port 5173)
+
+Live Demo
+[Connect-Sinos on Vercel](https://front-end-connect-sinos-pe1hlcfvc-mathdev-0s-projects.vercel.app/)
